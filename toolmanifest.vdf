@@ -1,0 +1,5 @@
+"manifest"
+{
+  "version" "1"
+  "commandline" "/pulsar.sh"
+}

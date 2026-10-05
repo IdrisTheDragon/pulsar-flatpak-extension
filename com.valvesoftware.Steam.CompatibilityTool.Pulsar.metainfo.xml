@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>com.valvesoftware.Steam.CompatibilityTool.Pulsar</id>
+  <extends>com.valvesoftware.Steam</extends>
+  <name>Pulsar</name>
+  <summary>Latest Pulsar release packaged in a flatpak for use with Steam flatpak</summary>
+  <url type="homepage">https://github.com/SpaceGT/Pulsar</url>
+  <project_license>MIT License Copyright (c) 2026 SpaceGT</project_license>
+  <metadata_license>CC0-1.0</metadata_license>
+  <releases>
+    <release version="2.4.2" date="2026-09-16">
+      <description></description>
+    </release>
+  </releases>
+</component>
