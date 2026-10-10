@@ -1,6 +1,27 @@
-# Pulsar extension for Steam Flatpak
+# Pulsar Flatpak Extension for the Steam Flatpak
 
-WIP PoC
+Want to run Space Engineers natively on Linux? YES, Pulsar can help with this.
+
+Want to run Space Engineers in the Steam Flatpak? YES, then this flatpak extension can help.
+
+Then you've come to the right place.
+
+This Flatpak Extension adds Pulsar as a Linux compatibility tool to Steam inside the flatpak.
+
+It supports both Space Engineers 1 and Space Engineers 2.
+
+## Pulsar
+
+You can find more information about pulsar here: https://github.com/SpaceGT/Pulsar. 
+
+The flatpak uses the latest release binary downloaded from the Releases section, with no modifications.
+You can check it by comparing the URL and [sha256sum](https://linuxize.com/post/sha256sum-and-md5sum-commands/) in the flatpak mainfest
+
+### DOTNET 10 SDK
+
+Pulsar and Space Engineers run with DOTNET 10 SDK, this can be found here: https://dotnet.microsoft.com/en-us/download/dotnet/10.0.
+The flatpak uses the latest x64 linux binary release, with no modifications.
+You can check it by comparing the URL and sha256sum in the flatpak mainfest.
 
 ## Install for steam flatpak
 
@@ -28,6 +49,4 @@ flatpak run com.valvesoftware.Steam
 ## TODO
 
 - avoid hardcoded paths in pulsar.sh?
-- Identify if space engineers 1 or 2 was launched and pick appropraite pulsar entry point.
-- Use dotnet10 flatpak extension instead of dotnet10 blob
-- Stop it launching multiple times.. Space Engineers not returning exit code zero so steam is retrying?
+- Use dotnet10 flatpak extension instead of dotnet10 binary blob?

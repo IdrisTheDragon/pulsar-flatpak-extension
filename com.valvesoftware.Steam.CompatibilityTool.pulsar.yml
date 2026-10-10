@@ -28,10 +28,13 @@ modules:
         sha256: 137268c8ad939c064ff1ee2a6fdf0899d8725377114ea012fbd1ad5fa2550418
         dest: dotnet-sdk
       # FIXME: Inlcude in the release of pulsar?
+      # Compatibility tool manifests, so steam see's pulsar and adds it to the compatibility tools drop down for the apps.
       - type: file
         path: toolmanifest.vdf
       - type: file
         path: compatibilitytool.vdf
+      # Entry script that decides whether to run Modern.bin or Interim.bin for Space Engineers 2 and 1.
+      # And handle other steam compatibilty tool quirks
       - type: file
         path: pulsar.sh
       # Flatpak metainfo file
@@ -41,12 +44,16 @@ modules:
       - |
         echo "Moving release contents to /app/share/steam/compatibilitytools.d/Pulsar"
         mv pulsar/* /app/share/steam/compatibilitytools.d/Pulsar/
+        
         echo "Moving dotnet contents to /app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk"
         mkdir /app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk/
         mv dotnet-sdk/* /app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk/
 
+        echo "Moving the compatibility tool config files into /app/share/steam/compatibilitytools.d/Pulsar"
         mv compatibilitytool.vdf /app/share/steam/compatibilitytools.d/Pulsar/
         mv toolmanifest.vdf /app/share/steam/compatibilitytools.d/Pulsar/
+
+        echo "Moving the compatibilitytool entry script into /app/share/steam/compatibilitytools.d/Pulsar"
         install  -Dm777 pulsar.sh /app/share/steam/compatibilitytools.d/Pulsar/
 
         echo "Installing metainfo"

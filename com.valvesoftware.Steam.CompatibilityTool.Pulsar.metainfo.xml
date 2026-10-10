@@ -9,7 +9,10 @@
   <metadata_license>CC0-1.0</metadata_license>
   <releases>
     <release version="2.4.3" date="2026-09-16">
-      <description></description>
+      <description>Bugfixes</description>
+    </release>
+    <release version="2.4.2" date="2026-09-16">
+      <description>Bugfixes</description>
     </release>
   </releases>
 </component>
