@@ -10,10 +10,10 @@ fi
 echo "Launching Pulsar"
 echo "args" $@
 if [[ $@ == *"244850"* ]]; then
-    DOTNET_ROOT=/app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk /app/share/steam/compatibilitytools.d/Pulsar/Interim.bin -useHome
+    DOTNET_ROOT=/app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk /app/share/steam/compatibilitytools.d/Pulsar/Interim.bin -useHome -noUpdate
     RETURN_CODE=$?;
 elif [[ $@ == *"1133870"* ]]; then
-    DOTNET_ROOT=/app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk /app/share/steam/compatibilitytools.d/Pulsar/Modern.bin -useHome
+    DOTNET_ROOT=/app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk /app/share/steam/compatibilitytools.d/Pulsar/Modern.bin -useHome -noUpdate
     RETURN_CODE=$?;
 else
     notify-send "Pulsar only supports Space Engineers and Space Engineers 2, I have no idea how to run this game."
