@@ -12,8 +12,8 @@ modules:
     sources:
       # Pulsar release archive
       - type: archive
-        url: https://github.com/SpaceGT/Pulsar/releases/download/v2.4.2/pulsar-v2.4.2-linux-x64.tar.gz
-        sha256: ea037b60faa52dff608d8aa5ff85fe30b1ee8fe177346eba1aa52fba5ff61d9d
+        url: https://github.com/SpaceGT/Pulsar/releases/download/v2.4.3/pulsar-v2.4.3-linux-x64.tar.gz
+        sha256: 83c703d606f381a28fe6d740088ad3e368cff438db8d7e48d56142fcd02c61cf
         dest: pulsar
         x-checker-data:
           type: json
