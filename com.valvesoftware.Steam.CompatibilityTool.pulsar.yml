@@ -24,9 +24,9 @@ modules:
             | first | .browser_download_url'
       # FIXME use the dotnet10 sdk extension? 
       - type: archive
-        url: https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.401/dotnet-sdk-10.0.401-linux-x64.tar.gz
-        sha256: 137268c8ad939c064ff1ee2a6fdf0899d8725377114ea012fbd1ad5fa2550418
-        dest: dotnet-sdk
+        url: https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.13/dotnet-runtime-10.0.13-linux-x64.tar.gz
+        sha256: 958c952691d2c3f8ce21f717f4e911c02b5da0e21ead21bd576368c454b79c77
+        dest: dotnet-runtime
       # FIXME: Inlcude in the release of pulsar?
       # Compatibility tool manifests, so steam see's pulsar and adds it to the compatibility tools drop down for the apps.
       - type: file
@@ -45,9 +45,9 @@ modules:
         echo "Moving release contents to /app/share/steam/compatibilitytools.d/Pulsar"
         mv pulsar/* /app/share/steam/compatibilitytools.d/Pulsar/
         
-        echo "Moving dotnet contents to /app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk"
-        mkdir /app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk/
-        mv dotnet-sdk/* /app/share/steam/compatibilitytools.d/Pulsar/dotnet-sdk/
+        echo "Moving dotnet contents to /app/share/steam/compatibilitytools.d/Pulsar/dotnet-runtime"
+        mkdir /app/share/steam/compatibilitytools.d/Pulsar/dotnet-runtime/
+        mv dotnet-runtime/* /app/share/steam/compatibilitytools.d/Pulsar/dotnet-runtime/
 
         echo "Moving the compatibility tool config files into /app/share/steam/compatibilitytools.d/Pulsar"
         mv compatibilitytool.vdf /app/share/steam/compatibilitytools.d/Pulsar/
